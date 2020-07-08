@@ -32,7 +32,66 @@
   object-fit: contain;
 }
 
+.statusArea{
+  z-index:5;
+  position:fixed; 
+  top: 5px; 
+  width:410px; 
+  height: 50px; 
+  border:none;
+  border-color:black;
+}
 
+.upButton{
+  z-index:5;position:fixed; top: 20px; left: 300px; width:50px; height: 50px; border:solid;border-color:black;background-color:#b0c4de;background-image:url(images/UpArrow.png); background-size:cover;
+} 
+.midButton{ 
+  z-index:5;position:fixed; top: 85px; left: 300px; width:50px; height: 50px; border:solid;border-color:black;background-color:#b0c4de; background-image:url(images/StopImage.png); background-size:cover;
+}
+.downButton {
+  z-index:5;position:fixed; top: 150px; left: 300px; width:50px; height: 50px; border:solid;border-color:black;background-color:#b0c4de; background-image:url(images/DownArrow.png); background-size:cover;
+}
+.leftButton {
+  z-index:5;position:fixed; top: 85px; left: 235px; width:50px; height: 50px; border:solid;border-color:black;background-color:#b0c4de; background-image:url(images/LeftArrow.png); background-size:cover;
+}
+.rightButton{ 
+  z-index:5;position:fixed; top: 85px; left: 365px; width:50px; height: 50px; border:solid;border-color:black;background-color:#b0c4de; background-image:url(images/RightArrow.png); background-size:cover;
+}
+.stopButton{ 
+  z-index:5;position:fixed; top: 150px; left: 365px; width:50px; height: 50px; border:solid;border-color:black;background-color:transparent; background-image:url(images/StopImage2.png); background-size:cover;
+}
+
+.startButton{
+  z-index:5;position:fixed; top: 230px; left: 70px; width:30px; height: 30px; border:none;border-color:black;background-color:transparent;background-image:url(images/GenericKey.png); background-size:cover;
+}
+.honkButton{ 
+  z-index:5;position:fixed; top: 230px; left: 125px; width:30px; height: 30px; border:none;border-color:black;background-color:transparent;background-image:url(images/HornImage.png); background-size:cover;
+}
+.frontLightsButton{ 
+  z-index:5;position:fixed; top: 230px; left: 190px; width:30px; height: 30px; border:none;border-color:black;background-color:transparent;background-image:url(images/FrontlightsOff.png); background-size:cover;
+}
+.recordButton{ 
+  z-index:5;position:fixed; top: 230px; left: 240px; width:30px; height: 30px; border:none;border-color:black;background-color:transparent;background-image:url(images/RecordImageOff.png); background-size:cover;
+}
+.takePictureButton{
+  z-index:5;position:fixed; top: 270px; left: 240px; width:30px; height: 30px; border:none;border-color:black;background-color:transparent;background-image:url(images/CameraImageOff.png); background-size:cover;
+} 
+.recordAudioButton{
+  z-index:5;position:fixed; top: 270px; left: 190px; width:30px; height: 30px; border:none;border-color:black;background-color:transparent;background-image:url(images/AudioRecord.png); background-size:cover;
+} 
+
+.restartButton{
+  z-index:5;position:fixed; top: 230px; left: 290px; width:30px; height: 30px; border:none;border-color:black;background-color:transparent;background-image:url(images/ResetImage2.png); background-size:cover;
+} 
+.shutdownButton{
+  z-index:5;position:fixed; top: 230px; left: 360px; width:30px; height: 30px; border:none;border-color:black;background-color:transparent;background-image:url(images/ShutdownImage2.png); background-size:cover;
+}
+.emergButton{ 
+  z-index:5;position:fixed; top: 230px; left: 430px; width:30px; height: 30px; border:none;border-color:black;background-color:transparent;background-image:url(images/EmergImage2.png); background-size:cover;
+}
+.streamButton{ 
+  z-index:5;position:fixed; top: 230px; left: 430px; width:30px; height: 30px; border:none;border-color:black;background-color:transparent;background-image:url(images/StreamOn.png); background-size:cover;
+}
 
 .App-header {
   background-color: #282c34;
