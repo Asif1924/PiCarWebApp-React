@@ -16,6 +16,10 @@ function App() {
   };
 
 /*
+		{{if handed==='right' }}
+			<div id="controllerImage" style="z-index:4;position:fixed; top: 5px; left: ${offset}; width:410px; height: 310px; border:solid;border-color:black;background-color:#bbffdd;background-image:url(${streamURL}); background-size:cover; object-fit: contain" ></div>
+			<div id="statusArea" style="z-index:5;position:fixed; top: 5px; left: ${offset}; width:410px; height: 50px; border:none;border-color:black" ></div>
+
 			{{if usepad===true }}
 				<div id="y-axisPad" style="z-index:5;position:fixed; top: 40px; left: 15px; width:80px; height: 180px; border:solid;border-color:black" >Y-Axis</div>
 				<div id="xy-axisPad" style="z-index:5;position:fixed; top: 100px; left: 215px; width:260px; height: 120px; border:solid;border-color:black" >X-Axis</div>
@@ -44,11 +48,16 @@ function App() {
 			<div id="speedArea" style="z-index:5;position:fixed; top: 5px; left: 5px; width:50px; height: 320px; border:solid;border-color:black;background-color:#b0c4de;" >Speed
 				<input id="SpeedSlider" type="range" min="0" max="100" value="100" step="5" sliderOrientation="verticalInverted"  />
 			</div>
+		{{/if}}	
+
 
 
 */
 
   return (
+
+    //$.tmpl("CarScreen",{ streamURL: carCommunicator.getStreamURL(), handed:"left", offset:"0px", usepad:false }).appendTo($element);
+
       <div className="ScreenLayoutFullWidth">
         <div className="controllerImage" style={imageURLStyle}></div>
         <div className="statusArea" style={offsetStyle}></div>
