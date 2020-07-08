@@ -27,11 +27,12 @@
   height: 310px; 
   border:solid;
   border-color:black;
-  background-color:#bbffdd;
-  background-image:url( http://192.168.1.183:9787/?action=stream ); 
+  background-color:#bbffdd;  
   background-size:cover; 
   object-fit: contain;
 }
+
+
 
 .App-header {
   background-color: #282c34;
