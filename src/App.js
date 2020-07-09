@@ -3,6 +3,8 @@ import CarUp from './components/CarUp'
 import CarDown from './components/CarDown';
 import CarLeft from './components/CarLeft';
 import CarRight from './components/CarRight';
+import CarMid from './components/CarMid';
+import CarStop from './components/CarStop';
 import './App.css';
 
 function App() {
@@ -67,11 +69,11 @@ function App() {
 
         
         <CarUp></CarUp>
-        <div className="midButton" ></div>
+        <CarMid></CarMid>
         <CarDown></CarDown>
         <CarLeft></CarLeft>
         <CarRight></CarRight>
-        <div className="stopButton" ></div>
+        <CarStop></CarStop>        
 
         <div className="startButton" ></div>
         <div className="honkButton" ></div>
