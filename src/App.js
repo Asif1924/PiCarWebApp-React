@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import CarUp from './components/CarUp'
 import './App.css';
 
 function App() {
@@ -62,7 +62,8 @@ function App() {
         <div className="controllerImage" style={imageURLStyle}></div>
         <div className="statusArea" style={offsetStyle}></div>
 
-        <div className="upButton" ></div>
+        
+        <CarUp></CarUp>
         <div className="midButton" ></div>
         <div className="downButton" ></div>
         <div className="leftButton" ></div>
