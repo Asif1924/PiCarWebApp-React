@@ -6,6 +6,7 @@ import CarRight from './components/CarRight';
 import CarMid from './components/CarMid';
 import CarStop from './components/CarStop';
 import './App.css';
+import CarStream from './components/CarStream';
 
 function App() {
 
@@ -64,9 +65,11 @@ function App() {
     //$.tmpl("CarScreen",{ streamURL: carCommunicator.getStreamURL(), handed:"left", offset:"0px", usepad:false }).appendTo($element);
 
       <div className="ScreenLayoutFullWidth">
-        <div className="controllerImage" style={imageURLStyle}></div>
+        
+        <CarStream></CarStream>
+        
+        
         <div className="statusArea" style={offsetStyle}></div>
-
         
         <CarUp></CarUp>
         <CarMid></CarMid>
