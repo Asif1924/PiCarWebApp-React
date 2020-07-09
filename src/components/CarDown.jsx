@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
-import dirImage from '../images/UpArrow.png';
+import dirImage from '../images/DownArrow.png';
 
-class CarUp extends Component {
+class CarDown extends Component {
 
     getStyle = () =>{
         return {
+            //z-index:5;position:fixed; top: 150px; left: 300px; width:50px; height: 50px; border:solid;border-color:black;background-color:#b0c4de; background-image:url(images/DownArrow.png); background-size:cover;
             zIndex:'5',
             position:'fixed',
-            top:'20px',
+            top:'150px',
             left:'300px',
             width:'50px',
             height:'50px',
@@ -34,4 +35,4 @@ class CarUp extends Component {
     }
 
 }
-export default CarUp
+export default CarDown

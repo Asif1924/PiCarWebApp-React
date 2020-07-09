@@ -1,5 +1,8 @@
 import React from 'react';
 import CarUp from './components/CarUp'
+import CarDown from './components/CarDown';
+import CarLeft from './components/CarLeft';
+import CarRight from './components/CarRight';
 import './App.css';
 
 function App() {
@@ -65,9 +68,9 @@ function App() {
         
         <CarUp></CarUp>
         <div className="midButton" ></div>
-        <div className="downButton" ></div>
-        <div className="leftButton" ></div>
-        <div className="rightButton" ></div>
+        <CarDown></CarDown>
+        <CarLeft></CarLeft>
+        <CarRight></CarRight>
         <div className="stopButton" ></div>
 
         <div className="startButton" ></div>
