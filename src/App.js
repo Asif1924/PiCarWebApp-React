@@ -1,25 +1,39 @@
 import React from 'react';
+import CarStream from './components/CarStream';
+
 import CarUp from './components/CarUp'
 import CarDown from './components/CarDown';
 import CarLeft from './components/CarLeft';
 import CarRight from './components/CarRight';
 import CarMid from './components/CarMid';
 import CarStop from './components/CarStop';
+
+import CarStart from './components/CarStart';
+import CarHonk from './components/CarHonk';
+
 import './App.css';
-import CarStream from './components/CarStream';
+import FrontLights from './components/FrontLights';
+import RecordVideo from './components/RecordVideo';
+import RecordAudio from './components/RecordAudio';
+import TakePic from './components/TakePic';
+
+
 
 function App() {
 
+  /*
   const imageURL = "http://192.168.1.183:9787/?action=stream";
-  const offset = 20;
+  
 
   const imageURLStyle = {
     backgroundImage: "url(" + imageURL + ")"
   };
-
+*/
+  const offset = 20;
   const offsetStyle = {
     left: offset
   };
+  
 
 /*
 		{{if handed==='right' }}
@@ -68,7 +82,6 @@ function App() {
         
         <CarStream></CarStream>
         
-        
         <div className="statusArea" style={offsetStyle}></div>
         
         <CarUp></CarUp>
@@ -77,13 +90,13 @@ function App() {
         <CarLeft></CarLeft>
         <CarRight></CarRight>
         <CarStop></CarStop>        
-
-        <div className="startButton" ></div>
-        <div className="honkButton" ></div>
-        <div className="frontLightsButton" ></div>
-        <div className="recordButton" ></div>
-        <div className="takePictureButton" ></div>
-        <div className="recordAudioButton" ></div>
+        
+        <CarStart></CarStart>
+        <CarHonk></CarHonk>
+        <FrontLights></FrontLights>
+        <RecordVideo></RecordVideo>
+        <TakePic></TakePic>
+        <RecordAudio></RecordAudio>
 
         <div className="restartButton" ></div>
         <div className="shutdownButton" ></div>
