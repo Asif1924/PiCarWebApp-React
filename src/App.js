@@ -16,6 +16,9 @@ import FrontLights from './components/FrontLights';
 import RecordVideo from './components/RecordVideo';
 import RecordAudio from './components/RecordAudio';
 import TakePic from './components/TakePic';
+import RestartPi from './components/RestartPi';
+import ShutdownPi from './components/ShutdownPi';
+import ToggleStream from './components/ToggleStream';
 
 
 
@@ -75,9 +78,6 @@ function App() {
 */
 
   return (
-
-    //$.tmpl("CarScreen",{ streamURL: carCommunicator.getStreamURL(), handed:"left", offset:"0px", usepad:false }).appendTo($element);
-
       <div className="ScreenLayoutFullWidth">
         
         <CarStream></CarStream>
@@ -98,10 +98,10 @@ function App() {
         <TakePic></TakePic>
         <RecordAudio></RecordAudio>
 
-        <div className="restartButton" ></div>
-        <div className="shutdownButton" ></div>
-        <div className="emergButton" ></div>
-        <div className="streamButton" ></div>
+        <RestartPi></RestartPi>        
+        <ShutdownPi></ShutdownPi>
+        
+        <ToggleStream></ToggleStream>
 
       </div>
   );
