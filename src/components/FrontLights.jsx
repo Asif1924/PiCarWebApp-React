@@ -1,7 +1,18 @@
 import React, { Component } from 'react'
-import dirImage from '../images/FrontlightsOff.png';
+import lightsOffImage from '../images/FrontlightsOff.png';
+import lightsOnImage from '../images/FrontlightsOn.png';
 
 class FrontLights extends Component {
+
+    constructor(props){
+        super(props);
+        this.state = {
+                        lights:'off',
+                        lightsImage:"images/FrontlightsOff.png",
+                        backgroundImage:"url(../images/FrontlightsOff.png)"
+                        };
+        this.handleClick=this.handleClick.bind(this);
+    }
 
     getStyle = () =>{
 
@@ -16,22 +27,33 @@ class FrontLights extends Component {
             border:'none',
             borderColor:'black',
             backgroundColor:'transparent',
-            backgroundImage:`url(${dirImage})`,
+            backgroundImage:'url(../images/FrontlightsOff.png)',
             backgroundSize:'cover',
             objectFit:'contain'
         }
     }
 
     handleClick = () => {
-        console.log("handleClick", this);
-        
+        console.log("handleClick", this);  
+        if(this.state.lights==="on"){
+            this.setState({lights:"off"});
+            this.setState({lightsImage:"images/FrontlightsOff.png"});
+            this.setState({backgroundImage:"url(images/FrontlightsOff.png)"});
+            this.style={backgroundImage:`url(${lightsOffImage})`}
+        }else{
+            this.setState({lights:"on"});
+            this.setState({lightsImage:"images/FrontlightsOn.png"});
+            this.setState({backgroundImage:"url(images/FrontlightsOn.png)"});
+            this.style={backgroundImage:`url(${lightsOnImage})`}
+        }
     }
 
     render() {
+        var divStyle = {backgroundImage:'url('+this.state.lightsImage+')'}
         
         return (
-            <div style={this.getStyle()} onClick={this.handleClick}>
-                
+            //<div className="frontLightsButton" style={divStyle} onClick={this.handleClick}>
+            <div style={this.getStyle()} onClick={this.handleClick}>            
             </div>
         )
     }

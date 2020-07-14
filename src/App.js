@@ -1,4 +1,6 @@
 import React from 'react';
+import './App.css';
+
 import CarStream from './components/CarStream';
 
 import CarUp from './components/CarUp'
@@ -11,7 +13,7 @@ import CarStop from './components/CarStop';
 import CarStart from './components/CarStart';
 import CarHonk from './components/CarHonk';
 
-import './App.css';
+
 import FrontLights from './components/FrontLights';
 import RecordVideo from './components/RecordVideo';
 import RecordAudio from './components/RecordAudio';

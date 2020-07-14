@@ -69,7 +69,7 @@
   z-index:5;position:fixed; top: 230px; left: 125px; width:30px; height: 30px; border:none;border-color:black;background-color:transparent;background-image:url(images/HornImage.png); background-size:cover;
 }
 .frontLightsButton{ 
-  z-index:5;position:fixed; top: 230px; left: 190px; width:30px; height: 30px; border:none;border-color:black;background-color:transparent;background-image:url(images/FrontlightsOff.png); background-size:cover;
+  z-index:5;position:fixed; top: 230px; left: 100px; width:30px; height: 30px; border:none;border-color:black;background-color:transparent; background-size:cover; object-fit:contain;
 }
 .recordButton{ 
   z-index:5;position:fixed; top: 230px; left: 240px; width:30px; height: 30px; border:none;border-color:black;background-color:transparent;background-image:url(images/RecordImageOff.png); background-size:cover;
