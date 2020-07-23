@@ -9,7 +9,9 @@ class FrontLights extends Component {
         this.state = {
                         lights:'off',
                         lightsImage:"images/FrontlightsOff.png",
-                        backgroundImage:"url(../images/FrontlightsOff.png)"
+                        backgroundImage:"url(../images/FrontlightsOff.png)",
+                        imgSrcOn:"../images/FrontlightsOn.png",
+                        imgSrcOff:"../images/FrontlightsOff.png"
                         };
         this.handleClick=this.handleClick.bind(this);
     }
@@ -27,33 +29,64 @@ class FrontLights extends Component {
             border:'none',
             borderColor:'black',
             backgroundColor:'transparent',
-            backgroundImage:'url(../images/FrontlightsOff.png)',
+            
             backgroundSize:'cover',
             objectFit:'contain'
         }
     }
 
-    handleClick = () => {
-        console.log("handleClick", this);  
+    handleClick = (event) => {
+        //console.log("handleClick");  
+        //console.log("handleClick", event);  
+        //console.log(event);  
         if(this.state.lights==="on"){
             this.setState({lights:"off"});
             this.setState({lightsImage:"images/FrontlightsOff.png"});
             this.setState({backgroundImage:"url(images/FrontlightsOff.png)"});
             this.style={backgroundImage:`url(${lightsOffImage})`}
+            console.log(this.style);  
         }else{
             this.setState({lights:"on"});
             this.setState({lightsImage:"images/FrontlightsOn.png"});
             this.setState({backgroundImage:"url(images/FrontlightsOn.png)"});
             this.style={backgroundImage:`url(${lightsOnImage})`}
+            console.log(this.style);  
         }
+        
     }
 
     render() {
-        var divStyle = {backgroundImage:'url('+this.state.lightsImage+')'}
+        var imgURL = this.state.lights==="on" ? this.state.imgSrcOn : this.state.imgSrcOff;
+        //console.log( imgURL );
+
+        var buttonStyle = {
+            zIndex:'5',
+            position:'fixed',
+            top:'230px',
+            left:'100px',
+            width:'30px',
+            height:'30px',
+            border:'none',
+            borderColor:'black',
+            backgroundColor:'transparent',            
+            backgroundSize:'cover',
+            objectFit:'contain'                 
+        }
+        //console.log( "divStyle = " + divStyle);
+        //console.log( divStyle );
         
         return (
             //<div className="frontLightsButton" style={divStyle} onClick={this.handleClick}>
-            <div style={this.getStyle()} onClick={this.handleClick}>            
+            //<div style={this.getStyle()} onClick={this.handleClick.bind(this)}>            
+            <div style={buttonStyle} onClick={this.handleClick}>
+                <img
+                    style={{
+                        width:'30px',
+                        height:'30px',
+                        objectFit:'contain'
+                    }} 
+                    src={this.state.lightsImage}
+                />
             </div>
         )
     }
